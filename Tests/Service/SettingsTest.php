@@ -22,7 +22,7 @@ class SettingsTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $repository = $this->getMockBuilder('SumoCoders\FrameworkSettingsBundle\Entity\SettingRepository')
+        $repository = $this->getMockBuilder('Doctrine\ORM\EntityRepository')
             ->disableOriginalConstructor()
             ->getMock();
 
