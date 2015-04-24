@@ -6,7 +6,6 @@ use Doctrine\ORM\EntityManager;
 use SumoCoders\FrameworkSettingsBundle\Entity\Setting;
 use SumoCoders\FrameworkSettingsBundle\Entity\SettingRepository;
 use SumoCoders\FrameworkSettingsBundle\Exception\DontUseException;
-use SumoCoders\FrameworkSettingsBundle\Exception\NotFoundException;
 use SumoCoders\FrameworkSettingsBundle\Exception\InvalidInstanceException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
@@ -91,7 +90,7 @@ class Settings implements ParameterBagInterface
     {
         $settings = $this->repository->findAll();
 
-        if ($settings) {
+        if (!empty($settings)) {
             foreach ($settings as $setting) {
                 $this->settings[$setting->getName()] = $setting;
             }
