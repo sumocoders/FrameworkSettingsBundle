@@ -13,9 +13,10 @@ Add FrameworkSettingsBundle as a requirement in your composer.json:
 ```
 
 **Warning**
+
 > Replace `dev-master` with a sane thing
 
-Run `composer update`:
+Run `composer update`
 
 Enable the bundle in the kernel.
 
