@@ -9,7 +9,7 @@
             <factory service="doctrine.orm.entity_manager" method="getRepository" />
             <argument>SumoCoders\FrameworkSettingsBundle\Entity\Setting</argument>
         </service>
-        <service id="settings" class="SumoCoders\FrameworkSettingsBundle\Service\Settings">
+        <service id="framework.settings" class="SumoCoders\FrameworkSettingsBundle\Service\Settings">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument type="service" id="framework.setting.repository" />
         </service>
