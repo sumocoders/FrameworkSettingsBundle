@@ -30,9 +30,9 @@ class Setting
     /**
      * @var boolean
      *
-     * @ORM\Column(name="isEditable", type="boolean")
+     * @ORM\Column(name="editable", type="boolean")
      */
-    private $isEditable;
+    private $editable;
 
     /**
      * Set name
@@ -83,33 +83,23 @@ class Setting
     /**
      * Set isEditable
      *
-     * @param boolean $isEditable
+     * @param boolean $editable
      * @return Setting
      */
-    public function setIsEditable($isEditable)
+    public function setEditable($editable)
     {
-        $this->isEditable = $isEditable;
+        $this->editable = $editable;
 
         return $this;
     }
 
     /**
-     * Get isEditable
+     * Is editable
      *
      * @return boolean
      */
-    public function getIsEditable()
-    {
-        return $this->isEditable;
-    }
-
-    /**
-     * Alias for get isEditable
-     *
-     * @return bool
-     */
     public function isEditable()
     {
-        return $this->getIsEditable();
+        return $this->editable;
     }
 }

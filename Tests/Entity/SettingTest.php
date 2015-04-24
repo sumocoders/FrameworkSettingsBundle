@@ -32,8 +32,7 @@ class SettingTest extends \PHPUnit_Framework_TestCase
      */
     public function testGettersAndSetters()
     {
-        $this->setting->setIsEditable(true);
-        $this->assertEquals(true, $this->setting->getIsEditable());
+        $this->setting->setEditable(true);
         $this->assertTrue($this->setting->isEditable());
 
         $this->setting->setName('name');

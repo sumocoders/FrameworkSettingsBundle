@@ -132,13 +132,14 @@ class Settings implements ParameterBagInterface
         }
 
         $setting->setValue($value);
-        $setting->setIsEditable($isEditable);
-
-        $this->settings[$name] = $setting;
+        $setting->setEditable($isEditable);
 
         // store and flush
         $this->entityManager->persist($setting);
         $this->entityManager->flush();
+
+        // reset it
+        $this->settings[$name] = $setting;
 
         return $this;
     }
