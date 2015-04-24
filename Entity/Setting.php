@@ -8,7 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Setting
  *
  * @ORM\Table()
- * @ORM\Entity(repositoryClass="SumoCoders\FrameworkSettingsBundle\Entity\SettingRepository")
+ * @ORM\Entity()
  */
 class Setting
 {
