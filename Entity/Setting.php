@@ -65,7 +65,7 @@ class Setting
      */
     public function setValue($value)
     {
-        $this->value = $value;
+        $this->value = json_encode($value);
 
         return $this;
     }
@@ -77,7 +77,7 @@ class Setting
      */
     public function getValue()
     {
-        return $this->value;
+        return json_decode($this->value);
     }
 
     /**
