@@ -33,3 +33,10 @@ public function registerBundles()
     );
 }
 ```
+
+Make sure your database-schema is updated, or at least your migrations are 
+generated:
+
+    php app/console doctrine:migrations:diff
+    php app/console doctrine:migrations:migrate
+
