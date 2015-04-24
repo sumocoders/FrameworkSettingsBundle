@@ -1,6 +1,6 @@
 <?php
 
-namespace SumoCoders\FrameworkSettingsBundle\Service;
+namespace SumoCoders\FrameworkSettingsBundle;
 
 use Doctrine\ORM\EntityManager;
 use SumoCoders\FrameworkSettingsBundle\Entity\Setting;
@@ -9,7 +9,7 @@ use SumoCoders\FrameworkSettingsBundle\Exception\DontUseException;
 use SumoCoders\FrameworkSettingsBundle\Exception\InvalidInstanceException;
 use Symfony\Component\DependencyInjection\ParameterBag\ParameterBagInterface;
 
-class Settings implements ParameterBagInterface
+class SettingsManager implements ParameterBagInterface
 {
     /**
      * @var EntityManager

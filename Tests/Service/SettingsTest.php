@@ -3,12 +3,12 @@
 namespace SumoCoders\FrameworkSettingsBundle\Tests\Service;
 
 use SumoCoders\FrameworkSettingsBundle\Entity\Setting;
-use SumoCoders\FrameworkSettingsBundle\Service\Settings;
+use SumoCoders\FrameworkSettingsBundle\SettingsManager;
 
 class SettingsTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var Settings
+     * @var SettingsManager
      */
     protected $settings;
 
@@ -26,7 +26,7 @@ class SettingsTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $this->settings = new Settings(
+        $this->settings = new SettingsManager(
             $entityManager,
             $repository
         );
