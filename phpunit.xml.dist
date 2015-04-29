@@ -15,7 +15,7 @@
         <server name="KERNEL_DIR" value="Tests/Controller/App" />
     </php>
     <testsuites>
-        <testsuite name="FrameworkSettingsBundle test suite">
+        <testsuite name="Bundle test suite">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>
@@ -32,6 +32,6 @@
     </filter>
 
     <logging>
-        <log type="coverage-clover" target="./coverage.xml"/>
+        <log type="coverage-clover" target="./coverage.clover"/>
     </logging>
 </phpunit>
