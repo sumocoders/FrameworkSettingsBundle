@@ -2,21 +2,11 @@
 
 ## Installation
 
-Add FrameworkSettingsBundle as a requirement in your composer.json:
-
-```
-{
-    "require": {
-        "sumocoders/framework-settings-bundle": "dev-master"
-    }
-}
-```
+    composer require sumocoders/framework-settings-bundle:dev-master
 
 **Warning**
 
 > Replace `dev-master` with a sane thing
-
-Run `composer update`
 
 Enable the bundle in the kernel.
 
