@@ -2,11 +2,7 @@
 
 ## Installation
 
-    composer require sumocoders/framework-settings-bundle:dev-master
-
-**Warning**
-
-> Replace `dev-master` with a sane thing
+    composer require sumocoders/framework-settings-bundle
 
 Enable the bundle in the kernel.
 
