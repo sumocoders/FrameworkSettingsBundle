@@ -11,6 +11,8 @@
     }
   ],
   "require": {
+    "php": "^5.5 || ^7.0",
+
     "doctrine/orm": "^2.5",
     "symfony/dependency-injection": "^2.8"
   },
