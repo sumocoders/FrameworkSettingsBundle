@@ -20,7 +20,7 @@ public function registerBundles()
 }
 ```
 
-Make sure your database-schema is updated, or at least your migrations are 
+Make sure your database-schema is updated, or at least your migrations are
 generated:
 
     php app/console doctrine:migrations:diff
@@ -35,17 +35,26 @@ the code below
 $settingsManager = $this->getContainer()->get('framework.settings_manager');
 ```
 
-As the code implements (partially) the ParameterBagInterface you are able to 
+As the code implements (partially) the ParameterBagInterface you are able to
 `add`, `set`, `get` settings.
 
-On the `get`-call a extra parameter is added which contains a default-value, 
-which will be returned when the setting doesn't exists. Warning: it wont be 
+On the `get`-call a extra parameter is added which contains a default-value,
+which will be returned when the setting doesn't exists. Warning: it wont be
 stored if the default-value is returned.
 
 ```php
 $settingsManager = $this->getContainer()->get('framework.settings_manager');
 $willReturnDefaultValue = $settingsManager->get(
-    'this.does.not.exists', 
+    'this.does.not.exists',
     'Default Value'
 );
+```
+
+## Usage in templates
+
+Also added is a Twig filter so you can easily access settings in the templates.
+You can do this as follows:
+
+```html
+{{ 'this.is.a.setting.key'|setting }}
 ```
