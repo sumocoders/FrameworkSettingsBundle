@@ -13,5 +13,9 @@
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument type="service" id="framework.setting.repository" />
         </service>
+        <service id="framework.setting.twig_extension" class="SumoCoders\FrameworkSettingsBundle\Twig\SettingsExtension" public="false">
+            <argument type="service" id="framework.settings_manager" />
+            <tag name="twig.extension" />
+        </service>
     </services>
 </container>
