@@ -52,9 +52,9 @@ $willReturnDefaultValue = $settingsManager->get(
 
 ## Usage in templates
 
-Also added is a Twig filter so you can easily access settings in the templates.
+Also added is a Twig function so you can easily access settings in the templates.
 You can do this as follows:
 
 ```html
-{{ 'this.is.a.setting.key'|setting }}
+{{ setting('this.is.a.setting.key') }}
 ```
