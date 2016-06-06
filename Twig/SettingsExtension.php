@@ -3,10 +3,10 @@
 namespace SumoCoders\FrameworkSettingsBundle\Twig;
 
 use SumoCoders\FrameworkSettingsBundle\SettingsManager;
-use \Twig_extension;
+use Twig_Extension;
 use Twig_SimpleFunction;
 
-class SettingsExtension extends Twig_extension
+class SettingsExtension extends Twig_Extension
 {
     /** @var SettingsManager */
     private $settingsManager;
