@@ -4,7 +4,7 @@ namespace SumoCoders\FrameworkSettingsBundle\Twig;
 
 use SumoCoders\FrameworkSettingsBundle\SettingsManager;
 use \Twig_extension;
-use Twig_SimpleFilter;
+use Twig_SimpleFunction;
 
 class SettingsExtension extends Twig_extension
 {
@@ -22,24 +22,24 @@ class SettingsExtension extends Twig_extension
     /**
      * @return array
      */
-    public function getFilters()
+    public function getFunctions()
     {
         return [
-            new Twig_SimpleFilter('setting', [$this, 'settingFilter'])
+            new Twig_SimpleFunction('setting', [$this, 'setting'])
         ];
     }
 
     /**
-     * @param string $setting
+     * @param string $settingName
      * @return string
      */
-    public function settingFilter($setting)
+    public function setting($settingName)
     {
-        if (!$this->settingsManager->has($setting)) {
+        if (!$this->settingsManager->has($settingName)) {
             return '';
         }
 
-        return $this->settingsManager->get($setting);
+        return $this->settingsManager->get($settingName);
     }
 
     /**
