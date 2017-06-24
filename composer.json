@@ -14,10 +14,10 @@
     "php": "^5.5 || ^7.0",
 
     "doctrine/orm": "^2.5",
-    "symfony/dependency-injection": "^2.8"
+    "symfony/dependency-injection": "^3.3"
   },
   "require-dev": {
-    "symfony/phpunit-bridge": "^3.0",
+    "symfony/phpunit-bridge": "^3.3",
     "phpunit/phpunit": "^5.2 || ^4.8"
   },
   "autoload": {
