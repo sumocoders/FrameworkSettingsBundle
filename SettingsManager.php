@@ -158,6 +158,24 @@ class SettingsManager implements ParameterBagInterface
     /**
      * {@inheritdoc}
      */
+    public function remove($name)
+    {
+        $this->isInitialized = false;
+
+        $setting = $this->get($name);
+        if ($setting === null) {
+            return;
+        }
+
+        $this->entityManager->remove($setting);
+        $this->entityManager->flush();
+
+        unset($this->settings[$name]);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function resolve()
     {
         throw new DontUseException();

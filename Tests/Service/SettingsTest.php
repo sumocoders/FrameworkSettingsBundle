@@ -128,6 +128,14 @@ class SettingsTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->settings->has('foo'));
     }
 
+    public function testRemoveItem()
+    {
+        $this->settings->set('name', 'John Doe');
+        $this->assertTrue($this->settings->has('name'));
+        $this->settings->remove('name');
+        $this->assertFalse($this->settings->has('name'));
+    }
+
     public function testResolveIsNotImplemented()
     {
         $this->setExpectedException(
