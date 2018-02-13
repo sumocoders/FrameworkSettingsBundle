@@ -186,4 +186,12 @@ class SettingsManager implements ParameterBagInterface
     {
         throw new DontUseException();
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function remove($name)
+    {
+        throw new DontUseException();
+    }
 }
