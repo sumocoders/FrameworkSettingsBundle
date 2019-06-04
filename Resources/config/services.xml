@@ -3,18 +3,18 @@
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
            xsi:schemaLocation="http://symfony.com/schema/dic/services
         http://symfony.com/schema/dic/services/services-1.0.xsd"
-        >
+>
     <services>
         <service id="framework.setting.repository" class="Doctrine\ORM\EntityRepository">
             <factory service="doctrine.orm.entity_manager" method="getRepository" />
             <argument>SumoCoders\FrameworkSettingsBundle\Entity\Setting</argument>
         </service>
-        <service id="framework.settings_manager" class="SumoCoders\FrameworkSettingsBundle\SettingsManager">
+        <service id="SumoCoders\FrameworkSettingsBundle\SettingsManager" public="true">
             <argument type="service" id="doctrine.orm.entity_manager" />
             <argument type="service" id="framework.setting.repository" />
         </service>
         <service id="framework.setting.twig_extension" class="SumoCoders\FrameworkSettingsBundle\Twig\SettingsExtension" public="false">
-            <argument type="service" id="framework.settings_manager" />
+            <argument type="service" id="SumoCoders\FrameworkSettingsBundle\SettingsManager" />
             <tag name="twig.extension" />
         </service>
     </services>
